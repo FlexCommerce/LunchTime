@@ -1,0 +1,17 @@
+{% extends "layout.twig" %}
+{% block content %}
+
+	<header class="template-header header-sz">
+		{% include "header.twig" %}
+		
+	</header>
+	<div class="header-feature">
+		{{widget('feature', 'featurewidget', {"header": "profile", "strapline":"profile", "buttonText":"see more", "align":"justifyright","defaultBgImg": asset('images/feature-bg.jpg'),  'showBtn': true})|raw}}
+	</div>
+	<div class="container page-wrap">
+
+		<section class="section main home-page main-sz">
+			{{zone('main')|raw}}
+		</section>
+
+{% endblock %}
